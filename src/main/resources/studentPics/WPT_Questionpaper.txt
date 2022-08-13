@@ -1,0 +1,6 @@
+Q1.Create a Books html page. Use bootstrap/CSS. ISBN number must be of 10 digit number.
+Data Fields: Book Name, Author, ISBN No.,Published Date
+ All text box must be at the center of page. 
+
+Q2.Create server using express and serve above HTML file. Receive data from books html page. Use get method. Redirect to books html page on receiving data
+

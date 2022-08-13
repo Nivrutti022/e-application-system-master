@@ -1,0 +1,64 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<style >
+body{
+ background-image: url("resources/images/profile.jpg");}
+</style>
+<meta charset="ISO-8859-1">
+<title>Show Profile</title>
+<%@ include file="./components/common_cs_js.jsp"%>
+</head>
+<body>
+	<%@ include file="./components/navbar.jsp"%>
+	<div class="container-fluid">
+  <div class="row mt-2">
+       <div class="col-md-4 offset-md-4 admin" >
+            <div class="card">
+                <%@ include file="./components/message.jsp"%>
+                <div class="card-body px-5">
+                <form>
+                <h1>Student Profile</h1>
+				<div class="form-group mt-3">
+					<div class="form-group">
+						<label for="inputEmail4">First Name</label> <input type="text"
+							class="form-control" id="inputEmail4"
+							value="<%=student.getFirstname()%>"
+							readonly>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail4">Last Name</label> <input type="text"
+							class="form-control" id="inputEmail4"
+							value="<%=student.getLastname()%>"
+							readonly>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword4">Email</label> <input type="email"
+							class="form-control" id="inputPassword4"
+							value="<%=student.getEmailid()%>"
+							readonly>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword4">Phone</label> <input type="text"
+							class="form-control" id="inputPassword4"
+							value="<%=student.getMobileno()%>"
+							readonly>
+					</div>
+
+					<div class="form-group">
+						<label for="inputAddress">Address</label>
+						<textarea class="form-control" id="inputAddress" rows="3" readonly>
+							<%=student.getStreet()+" "+student.getCity()+" "+student.getPincode()%>
+						</textarea>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+</body>
+</html>
